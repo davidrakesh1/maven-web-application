@@ -100,8 +100,8 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-release/</url>
+	      <name>jenkinsdemo</name>
+	      <url>`http://3.144.221.224:8081/repository/jenkinsdemo/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
