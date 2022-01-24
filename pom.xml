@@ -107,7 +107,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>mvn</name>
-	      <url>http://http://3.17.140.216:8081//repository/snapshot/</url>
+	      <url>http://http://3.144.221.224//repository/snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
