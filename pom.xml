@@ -106,8 +106,8 @@
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>mvn</name>
-	      <url>http://3.144.221.224//repository/snapshot/</url>
+	      <name>jenkinsdemo1</name>
+	      <url>http://3.144.221.224:8081/repository/jenkinsdemo1/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
