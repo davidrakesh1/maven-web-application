@@ -1,10 +1,10 @@
 pipeline{
-	agentany
+	agent any
 	tools{
-	maven'maven'
+	maven 'maven'
 	}
 	stages{
-		stage(checkout){
+		stage('checkout'){
 			steps{
 		git 'https://github.com/davidrakesh1/maven-web-application.git'	
 			}
