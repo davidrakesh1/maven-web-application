@@ -1,4 +1,5 @@
 pipeline{
+	
 	agent any
 	tools{
 	maven 'maven'
@@ -7,6 +8,7 @@ pipeline{
 	pollSCM('* * * * *')
 	}
 	stages{
+		
 		stage('checkout'){
 			steps{
               git branch: 'dev', url: 'https://github.com/davidrakesh1/maven-web-application.git'			}
@@ -18,6 +20,7 @@ pipeline{
 			sh  "mvn clean package"	
 			}
 		}	
+	
 	stage('deploy'){
 		steps{
 		sshagent(['tomcat2']) {
@@ -28,4 +31,5 @@ pipeline{
 		
 		
 }
+
 }
