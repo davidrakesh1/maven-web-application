@@ -4,9 +4,11 @@ pipeline{
 	tools{
 	maven 'maven'
 	}
+	
 	triggers{
 	pollSCM('* * * * *')
 	}
+	
 	stages{
 		
 		stage('checkout'){
@@ -25,11 +27,9 @@ pipeline{
 		steps{
 		sshagent(['tomcat2']) {
                 sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.117.228.19:/opt/tomcat2/webapps'  
-}
-		}
+          }
 	}
-		
-		
+	}
+				
 }
-
 }
