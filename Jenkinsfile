@@ -16,10 +16,10 @@ agent any
             sh 'mvn clean package'
             }
            }   
-        stage('deploy'){
-            steps{
-           sshagent(['new1']) {
-          sh 'scp -o StrictHostKeyChecking=no target/*.war ec2user@18.220.217.117:/opt/tomcat3/webapps/'
+         stage('deploy'){
+        steps{
+             sshagent(['new1']) {
+         sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.220.217.117:/opt/tomcat3/webapps/' 
              
             }
             }
