@@ -20,7 +20,7 @@ agentany
         stage('deploy'){
             steps{
             sshagent(['new1']) {
-           sh 'scp -o stricthostchecking=no target*/.war ec2user@18.117.228.19:/opt/tomcat2/webapps/
+           sh 'scp -o stricthostchecking=no target*/.war ec2user@18.220.217.117:/opt/tomcat3/webapps/
             }
             }
            }   
