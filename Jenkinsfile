@@ -11,9 +11,8 @@ agent any
             git branch: 'prod', url: 'https://github.com/davidrakesh1/maven-web-application.git'
             }
             }
- 
-        stage('build'){
-            steps{
+ stage('build'){
+        steps{
             sh 'mvn clean package'
             }
            }   
