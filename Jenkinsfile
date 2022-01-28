@@ -1,5 +1,5 @@
 pipeline{
-agentany
+agent any
     tools{
     maven 'maven'
     }
