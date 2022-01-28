@@ -22,7 +22,7 @@ tools {
   stage('deploy to tomcat'){
         steps{
             sshagent(['new1']) {
-         sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.117.228.19:/opt/tomcat2/webapps/' 
+         sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.220.217.117:/opt/tomcat3/webapps/' 
     
   }
   }
