@@ -3,9 +3,6 @@ agentany
     tools{
     maven 'maven'
     }
-    tirggers{
-    pollSCM ("* * * * *")
-    }
 
     stages{
     
