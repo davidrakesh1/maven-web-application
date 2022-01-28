@@ -1,31 +1,32 @@
 pipeline{
-agent any 
-tools {
+agentany
+    tools{
     maven 'maven'
-}
-stages{
-    
-    stage('code checkout'){
-        steps{
-           git branch: 'dev', url: 'https://github.com/davidrakesh1/maven-web-application.git'
-  }
-  }
- 
-    stage('build'){
-        steps{
-            sh 'mvn clean package'
-  }
-  }
+    }
+    tirggers{
+    pollSCM ('* * * * *')
+    }
 
-  stage('deploy to tomcat'){
-        steps{
-            sshagent(['new1']) {
-         sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.117.228.19:/opt/tomcat2/webapps/' 
+    stages{
     
-  }
-  }
-  }
-  
-  
-}
-}
+        stage('git checkout'){
+            steps{
+            git branch: 'prod', url: 'https://github.com/davidrakesh1/maven-web-application.git'
+            }
+            }
+ 
+        stage('build'){
+            steps{
+            sh "mvn clean package"'
+            }
+           }   
+        stage('deploy'){
+            steps{
+            sshagent(['new1']) {
+           sh 'scp -o stricthostchecking=no target*/.war ec2user@18.117.228.19:/opt/tomcat2/webapps/
+            }
+            }
+           }   
+        
+    }
+    }
