@@ -14,7 +14,7 @@ agentany
  
         stage('build'){
             steps{
-            sh "mvn clean package"'
+            sh 'mvn clean package'
             }
            }   
         stage('deploy'){
