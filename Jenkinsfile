@@ -4,7 +4,7 @@ agentany
     maven 'maven'
     }
     tirggers{
-    pollSCM ('* * * * *')
+    pollSCM ("* * * * *")
     }
 
     stages{
