@@ -3,7 +3,13 @@ agent any
 tools {
     maven 'maven'
 }
-stages{
+
+ tirggers{
+    pollSCM ('* * * * *')
+    }
+    
+    
+    stages{
     
     stage('code checkout'){
         steps{
