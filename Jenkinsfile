@@ -4,11 +4,7 @@ tools {
     maven 'maven'
 }
 
- tirggers{
-    pollSCM ("* * * * *")
-    }
-    
-    
+        
     stages{
     
     stage('code checkout'){
