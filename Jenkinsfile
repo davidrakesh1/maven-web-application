@@ -4,7 +4,7 @@ tools {
     maven 'maven'
 }
     triggers{
-    pollSCM(* * * * *)
+    pollSCM('* * * * *')
     }
         
     stages{
