@@ -5,7 +5,7 @@ tools {
 }
     
     triggers{
-    pollSCM(* * * * *)
+    pollSCM('* * * * *')
     }
     
 stages{
